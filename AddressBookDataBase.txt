@@ -113,6 +113,14 @@ mysql> select * from addressBook;
 +-----------+---------+--------+-------------+---------+--------------+--------------------+
 3 rows in set (0.00 sec)
 
+mysql> select * from addressBook where city = 'sangli';
++-----------+---------+--------+-------------+--------+-------------+------------------+
+| firstname | address | city   | state       | zip    | phonenumber | email            |
++-----------+---------+--------+-------------+--------+-------------+------------------+
+| Neha      | Burli   | sangli | Maharashtra | 524004 |  9843261782 | neha12@gmail.com |
++-----------+---------+--------+-------------+--------+-------------+------------------+
+1 row in set (0.00 sec)
+
 mysql> select city, count(firstName) from addressBook group by city;
 +--------+------------------+
 | city   | count(firstName) |
@@ -122,3 +130,11 @@ mysql> select city, count(firstName) from addressBook group by city;
 | Pune   |                1 |
 +--------+------------------+
 3 rows in set (0.33 sec)
+
+mysql> select * from addressBook where city = 'Pune' ORDER BY firstname;
++-----------+---------+------+-------------+-------+--------------+--------------------+
+| firstname | address | city | state       | zip   | phonenumber  | email              |
++-----------+---------+------+-------------+-------+--------------+--------------------+
+| Shruti    | Katraj  | Pune | Maharashtra | 52213 | 984233456567 | shruti04@gmail.com |
++-----------+---------+------+-------------+-------+--------------+--------------------+
+1 row in set (0.00 sec)
