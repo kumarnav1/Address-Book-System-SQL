@@ -138,3 +138,25 @@ mysql> select * from addressBook where city = 'Pune' ORDER BY firstname;
 | Shruti    | Katraj  | Pune | Maharashtra | 52213 | 984233456567 | shruti04@gmail.com |
 +-----------+---------+------+-------------+-------+--------------+--------------------+
 1 row in set (0.00 sec)
+
+
+mysql> alter table Addressbook add bookname varchar(50) not null,add contacttype varchar(50) not null;
+Query OK, 0 rows affected (0.73 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc AddressBook;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| firstname   | varchar(50)  | NO   |     | NULL    |       |
+| address     | varchar(100) | NO   |     | NULL    |       |
+| city        | varchar(50)  | NO   |     | NULL    |       |
+| state       | varchar(50)  | NO   |     | NULL    |       |
+| zip         | int          | NO   |     | NULL    |       |
+| phonenumber | double       | NO   |     | NULL    |       |
+| email       | varchar(100) | NO   |     | NULL    |       |
+| bookname    | varchar(50)  | NO   |     | NULL    |       |
+| contacttype | varchar(50)  | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+9 rows in set (0.00 sec)
+
