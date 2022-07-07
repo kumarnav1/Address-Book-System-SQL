@@ -10,4 +10,23 @@ owners.
 
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
-mysql>
+
+mysql> create database Address_Book_System;
+Query OK, 1 row affected (0.34 sec)
+
+mysql> show databases;
++---------------------+
+| Database            |
++---------------------+
+| address_book_system |
+| employee            |
+| information_schema  |
+| jdbc-video          |
+| mynewshop           |
+| mysql               |
+| newdb               |
+| payroll_service     |
+| performance_schema  |
+| sys                 |
++---------------------+
+10 rows in set (0.04 sec)
