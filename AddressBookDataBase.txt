@@ -160,3 +160,15 @@ mysql> desc AddressBook;
 +-------------+--------------+------+-----+---------+-------+
 9 rows in set (0.00 sec)
 
+mysql> update Addressbook set bookname ='helloworld',contacttype='friend';
+Query OK, 3 rows affected (0.00 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> select count(firstname) from Addressbook where contacttype='friend';
++------------------+
+| count(firstname) |
++------------------+
+|                3 |
++------------------+
+1 row in set (0.00 sec)
+
